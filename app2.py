@@ -11,7 +11,7 @@ import numpy as np
 
 def load_model():
     # Load the model using TensorFlow
-    model = tf.keras.models.load_model('s14b1.h5')
+    model = tf.keras.models.load_model('videoclassificationmodel9.h5')
 
     return model
 
@@ -49,7 +49,7 @@ def save_video(video_file):
 
 def predict(file_path,image_placeholder):
     CLASSES_LIST = ["punch","pullup","pour","pick","laugh"]
-    SEQUENCE_LENGTH = 16
+    SEQUENCE_LENGTH = 4
     # Initialize the VideoCapture object to read from the video file.
     video_reader = cv2.VideoCapture(file_path)
     
@@ -83,7 +83,7 @@ def predict(file_path,image_placeholder):
             break
 
         # Resize the Frame to fixed Dimensions.
-        resized_frame = cv2.resize(frame, (128,128))
+        resized_frame = cv2.resize(frame, (64,64))
 
         # Normalize the resized frame by dividing it with 255 so that each pixel value then lies between 0 and 1.
         normalized_frame = resized_frame / 255
