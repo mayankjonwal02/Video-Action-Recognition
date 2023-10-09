@@ -11,7 +11,7 @@ import numpy as np
 
 def load_model():
     # Load the model using TensorFlow
-    model = tf.keras.models.load_model('videoclassificationmodel8.h5')
+    model = tf.keras.models.load_model('s14b1.h5')
 
     return model
 
