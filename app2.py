@@ -49,7 +49,7 @@ def save_video(video_file):
 
 def predict(file_path,image_placeholder):
     CLASSES_LIST = ["punch","pullup","pour","pick","laugh"]
-    SEQUENCE_LENGTH = 4
+    SEQUENCE_LENGTH = 16
     # Initialize the VideoCapture object to read from the video file.
     video_reader = cv2.VideoCapture(file_path)
     
